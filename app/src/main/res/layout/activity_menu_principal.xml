@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blueMALB"
+    tools:context=".MenuPrincipalActivity">
+
+    <!-- Texto Principal -->
+    <TextView
+        android:id="@+id/Titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar Estatus"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:fontFamily="@font/rubikmedium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.040"
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="616dp" />
+
+    <!-- Botón para Arribos -->
+    <Button
+        android:id="@+id/ButtonArribo"
+        android:layout_width="380dp"
+        android:layout_height="90dp"
+        android:text="Arribo"
+        android:background="@color/greenButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Titulo"
+        app:layout_constraintVertical_bias="0.040"
+         />
+
+    <!-- Botón para Facturas -->
+    <Button
+        android:id="@+id/ButtonFacturas"
+        android:layout_width="380dp"
+        android:layout_height="90dp"
+        android:text="Digitalizar Facturas"
+        android:background="@color/greenButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ButtonArribo"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <!-- Botón para Mesa de Control -->
+    <Button
+        android:id="@+id/MesaControl"
+        android:layout_width="380dp"
+        android:layout_height="90dp"
+        android:text="Mesa de Control"
+        android:backgroundTint="@color/greenButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ButtonFacturas"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- Botón para Cortina -->
+    <Button
+        android:id="@+id/Cortina"
+        android:layout_width="380dp"
+        android:layout_height="90dp"
+        android:text="Cortina"
+        android:backgroundTint="@color/greenButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MesaControl"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- Botón para Proceso -->
+    <Button
+        android:id="@+id/Proceso"
+        android:layout_width="380dp"
+        android:layout_height="90dp"
+        android:text="Proceso"
+        android:backgroundTint="@color/greenButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Cortina"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- Botón para Liberar Unidad -->
+    <Button
+        android:id="@+id/Liberar"
+        android:layout_width="380dp"
+        android:layout_height="90dp"
+        android:text="Liberar Unidad"
+        android:backgroundTint="@color/greenButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Proceso"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

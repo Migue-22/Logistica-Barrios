@@ -1,0 +1,28 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Capa de sombra -->
+    <item>
+        <shape
+            android:shape="rectangle">
+            <solid android:color="#00000000"/> <!-- Fondo transparente -->
+            <corners android:radius="4dp"/> <!-- Radio de las esquinas -->
+            <padding
+                android:left="2dp"
+                android:right="2dp"
+                android:top="2dp"
+                android:bottom="2dp"/>
+        </shape>
+    </item>
+    <!-- Capa de fondo del botón -->
+    <item>
+        <shape
+            android:shape="rectangle">
+            <solid android:color="@color/greenButton"/>
+            <corners android:radius="4dp"/>
+            <padding
+                android:left="0dp"
+                android:right="0dp"
+                android:top="0dp"
+                android:bottom="0dp"/>
+        </shape>
+    </item>
+</layer-list>

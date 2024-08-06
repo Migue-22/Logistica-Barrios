@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="purple_200">#BB86FC</color>
+    <color name="blueMALB">#2171cc</color>
+    <color name="greenButton">#4CAF50</color>
+    <color name="greenButtonShadow">#45a049</color>
+    <color name="white">#FFFFFF</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+    <color name="black">#000000</color>
+    <color name="colorPrimary">#003A99</color> <!-- Color principal -->
+    <color name="colorPrimaryDark">#003A70</color> <!-- Color de la barra de estado -->
+    <color name="colorAccent">#03DAC6</color> <!-- Color de acento -->
+    <color name="backgroundColor">#FFFFFF</color> <!-- Color de fondo -->
+    <color name="textColor">#000000</color> <!-- Color del texto -->
+    <color name="color_default_line">#FFFFFF</color> <!-- Blanco -->
+    <color name="color_focused_line">#4CAF50</color> <!-- Verde -->
+    <color name="colorPressed">#FF0000</color>
+    <color name="colorNormal">#00FF00</color>
+    <color name="colorDisabled">#CCCCCC</color>
+    <color name="red">#FF0000</color>
+</resources>

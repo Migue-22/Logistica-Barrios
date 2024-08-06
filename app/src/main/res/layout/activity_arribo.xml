@@ -1,0 +1,80 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blueMALB"
+    tools:context=".ArriboActivity">
+
+    <!-- Título de la actividad -->
+    <TextView
+        android:id="@+id/Arribos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Viajes"
+        android:fontFamily="@font/rubikmedium"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Contenedor para los botones de búsqueda y filtro -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:id="@+id/botones"
+        app:layout_constraintTop_toBottomOf="@id/Arribos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- RecyclerView para mostrar los arribos -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewArribos"
+        android:layout_width="411dp"
+        android:layout_height="690dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botones"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/search_button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Boton para Buscar"
+        android:src="@drawable/ic_search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/filter_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botones"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/filter_button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="724dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Boton para Filtrar"
+        android:src="@drawable/ic_filter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/botones"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

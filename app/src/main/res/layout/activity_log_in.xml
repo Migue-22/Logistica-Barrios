@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blueMALB"
+    tools:context=".LogInActivity">
+    <!-- EditText para ingresar el nombre de usuario. -->
+    <!-- TextView que muestra el texto "Inicio de Sesion". -->
+
+    <TextView
+        android:id="@+id/Titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inicio de Sesion"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.09" />
+
+
+
+        <TextView
+            android:id="@+id/Usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Usuario"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Titulo"
+            app:layout_constraintVertical_bias="0.09" />
+
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:background="@drawable/edittext_background"
+            android:textCursorDrawable="@drawable/cursor_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Usuario"
+            app:layout_constraintVertical_bias="0.09" />
+
+
+        <TextView
+            android:id="@+id/Contraseña"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contraseña"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="152dp"
+            tools:layout_editor_absoluteY="359dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/username"
+            app:layout_constraintVertical_bias="0.09"/>
+
+        <!-- EditText para ingresar la contraseña. -->
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:background="@drawable/edittext_background"
+            android:textCursorDrawable="@drawable/cursor_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Contraseña"
+            app:layout_constraintVertical_bias="0.09" />
+
+        <ImageButton
+            android:id="@+id/togglePasswordVisibility"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Toggle password visibility"
+            android:src="@drawable/ic_visibility_off"
+            app:layout_constraintBottom_toBottomOf="@+id/password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/password"
+            app:layout_constraintTop_toTopOf="@+id/password"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="210dp"
+        android:layout_height="60dp"
+        android:background="@drawable/button_backgroundgreen"
+        android:text="Iniciar Sesion"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        app:layout_constraintVertical_bias="0.425" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
