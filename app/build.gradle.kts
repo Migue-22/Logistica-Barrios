@@ -36,6 +36,8 @@ android {
 }
 
 dependencies {
+    implementation ("com.squareup.okhttp3:okhttp:4.10.0") // Usa la última versión estable
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.10.0") // Opcional para depuración
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
     implementation("com.google.android.material:material:1.8.0")

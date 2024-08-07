@@ -1,6 +1,7 @@
 package com.recursoconfiable.logisticabarrios
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,7 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 // Adaptador para el RecyclerView que muestra una lista de arribos.
-class ArriboAdapter(
+class   ArriboAdapter(
     private val arribos: List<Arribo>, // Lista de arribos a mostrar.
     private val onClick: (Arribo) -> Unit // Función de clic para manejar eventos de clic en los items.
 ) : RecyclerView.Adapter<ArriboAdapter.ViewHolder>() {
@@ -28,8 +29,13 @@ class ArriboAdapter(
 
         init {
             itemView.setOnClickListener {
-                onClick(arribos[adapterPosition])
+                val arribo = arribos[adapterPosition]
+                // Envia el ID del arribo a la actividad
+                val intent = Intent(itemView.context, ArribosCapturaActivity::class.java)
+                intent.putExtra("ARRIBO_ID", arribo.id)  // Asegúrate de que `arribo.id` es el ID correcto
+                itemView.context.startActivity(intent)
             }
+
         }
     }
 

@@ -5,6 +5,318 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ArribosCapturaActivity">
+    tools:context=".DigitalizadorFacturas"
+    android:background="@color/blueMALB">
+
+    <TextView
+        android:id="@+id/ArriboTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Arribo"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ContainerFolioArribo"
+        android:layout_width="406dp"
+        android:layout_height="29dp"
+        app:layout_constraintBottom_toTopOf="@+id/ContainerFormularioArribo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ArriboTitulo"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/textFolioLabelArribo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Folio:"
+            android:textColor="@color/white"
+
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.142"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textFolioValueArribo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.808"
+            app:layout_constraintStart_toEndOf="@id/textFolioLabelArribo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ContainerFormularioArribo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/ContainerFolioArribo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    <EditText
+        android:id="@+id/NombreConductor"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:text="Nombre de Conductor"
+        android:paddingStart="10dp"
+        android:inputType="text"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:background="@drawable/edittext_background"
+        android:textCursorDrawable="@drawable/cursor_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/TelefonoConductor"
+        />
+    <EditText
+        android:id="@+id/TelefonoConductor"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:text="Teléfono Conductor"
+        android:paddingStart="10dp"
+        android:inputType="number"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:background="@drawable/edittext_background"
+        android:textCursorDrawable="@drawable/cursor_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/NombreConductor"
+        app:layout_constraintBottom_toTopOf="@id/PlacaTracto"/>
+    <EditText
+        android:id="@+id/PlacaTracto"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:text="Placa Tracto"
+        android:paddingStart="10dp"
+        android:inputType="number"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:background="@drawable/edittext_background"
+        android:textCursorDrawable="@drawable/cursor_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TelefonoConductor"
+        app:layout_constraintBottom_toTopOf="@id/Cero"/>
+        
+    <EditText
+        android:id="@+id/Cero"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:text="0"
+        android:paddingStart="10dp"
+        android:inputType="number"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:background="@drawable/edittext_background"
+        android:textCursorDrawable="@drawable/cursor_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/PlacaTracto"
+        app:layout_constraintBottom_toTopOf="@id/Marchamo"/>
+
+    <EditText
+        android:id="@+id/Marchamo"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:text="Marchamo"
+        android:paddingStart="10dp"
+        android:inputType="number"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:background="@drawable/edittext_background"
+        android:textCursorDrawable="@drawable/cursor_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Cero"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ContainerMarchamoDañado"
+        android:layout_width="408dp"
+        android:layout_height="88dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ContainerFormularioArribo"
+        app:layout_constraintVertical_bias="0.004">
+
+
+        <TextView
+            android:id="@+id/MarchamoDañado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Marchamo Dañado?"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toTopOf="@id/CheckBoxMarchamoSi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.062"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/CheckBoxMarchamoSi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:text="Si"
+            android:textColor="@color/white"
+
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/CheckBoxMarchamoNo"
+            app:layout_constraintHorizontal_bias="0.369"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/MarchamoDañado" />
+
+        <CheckBox
+            android:id="@+id/CheckBoxMarchamoNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:text="No"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.369"
+            app:layout_constraintStart_toEndOf="@id/CheckBoxMarchamoSi"
+            app:layout_constraintTop_toBottomOf="@id/MarchamoDañado" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="408dp"
+        android:layout_height="251dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ContainerMarchamoDañado"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/ButtonMarchamos"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_backgroundgreen"
+            android:text="CAPTURAR MARCHAMOS"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.061" />
+
+        <ImageView
+            android:id="@+id/imageViewMarchamo"
+            android:layout_width="69dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/ButtonFotoPuertas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ButtonMarchamos" />
+
+        <ImageButton
+            android:id="@+id/ButtonShareMarchamos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_share"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ButtonMarchamos"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.202" />
+
+        <Button
+            android:id="@+id/ButtonFotoPuertas"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:background="@drawable/button_backgroundgreen"
+            android:text="FOTO DE PUERTAS"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ButtonMarchamos"
+            app:layout_constraintVertical_bias="0.241" />
+
+        <ImageView
+            android:id="@+id/imageViewPuertas"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/ButtonGuardar"
+            app:layout_constraintTop_toBottomOf="@id/ButtonFotoPuertas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <ImageButton
+            android:id="@+id/ButtonSharePuertas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_share"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ButtonFotoPuertas"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.537" />
+
+        <Button
+            android:id="@+id/ButtonGuardar"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_backgroundgreen"
+            android:text="Guardar"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ButtonFotoPuertas"
+            app:layout_constraintVertical_bias="0.627" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

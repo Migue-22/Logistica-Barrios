@@ -46,7 +46,7 @@ class MenuPrincipalActivity : AppCompatActivity() {
 
         // Configura Retrofit
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://67b3-2806-2f0-9585-670e-39c4-2929-cc63-bdbf.ngrok-free.app")
+            .baseUrl("https://bb66-2806-2f0-9585-670e-54a0-37a4-7c0a-fb98.ngrok-free.app")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
